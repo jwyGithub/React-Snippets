@@ -1,0 +1,12 @@
+{
+    "export default component": {
+        "prefix": "edc",
+        "body": "const $1 = () => {\r\n    return <div>$1</div>;\r\n};\r\nexport default $1;\r\n",
+        "description": ""
+    },
+    "export default connect component": {
+        "prefix": "edcc",
+        "body": "import { connect } from 'react-redux';\r\nimport { bindActionCreators } from 'redux';\r\n\r\nconst App = ({ user, actions }) => {\r\n    return (\r\n        <div>\r\n            <h1>{{ user }}</h1>\r\n        </div>\r\n    );\r\n};\r\n\r\nconst mapStateToProps = (state, props) => {\r\n    return {\r\n        user: state.user ?? 'test'\r\n    };\r\n};\r\n\r\nconst mapDispatchToProps = (dispatch, props) => {\r\n    return {\r\n        actions: bindActionCreators(\r\n            {\r\n                writeComment: comment => ({\r\n                    comment,\r\n                    type: 'WRITE_COMMENT'\r\n                })\r\n            },\r\n            dispatch\r\n        )\r\n    };\r\n};\r\nexport default connect(mapStateToProps, mapDispatchToProps)(App);\r\n",
+        "description": ""
+    }
+}

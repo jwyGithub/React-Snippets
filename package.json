@@ -1,0 +1,49 @@
+{
+    "name": "react-snippets",
+    "displayName": "React-Snippets",
+    "description": "react snippets for smiple",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "node src/index.js && node src/output/markdown.js"
+    },
+    "icon": "icon/React.png",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "galleryBanner": {
+        "color": "#0273D4",
+        "theme": "dark"
+    },
+    "publisher": "jwy",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    },
+    "repository": "https://github.com/jwyGithub/JavaScript-Snippets.git",
+    "homepage": "https://github.com/jwyGithub/JavaScript-Snippets/readme",
+    "license": "SEE LICENSE IN LICENSE",
+    "devDependencies": {
+        "@types/node": "^17.0.21",
+        "prettier": "^2.5.1"
+    }
+}
+
