@@ -1,5 +1,5 @@
 {
-    "name": "react-snippets",
+    "name": "react-snippets-self",
     "displayName": "React-Snippets",
     "description": "react snippets for smiple",
     "version": "0.0.1",
@@ -38,8 +38,8 @@
             }
         ]
     },
-    "repository": "https://github.com/jwyGithub/JavaScript-Snippets.git",
-    "homepage": "https://github.com/jwyGithub/JavaScript-Snippets/readme",
+    "repository": "https://github.com/jwyGithub/React-Snippets.git",
+    "homepage": "https://github.com/jwyGithub/React-Snippets.git/readme",
     "license": "SEE LICENSE IN LICENSE",
     "devDependencies": {
         "@types/node": "^17.0.21",

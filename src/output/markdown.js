@@ -5,26 +5,25 @@ const prettier = require('../lib/prettier.js');
 const snippetsRoot = resolve(__dirname, '../snippets/');
 
 const markdownBody = body => {
-    return `# JavaScript Snippets
+    return `# React Snippets
 
-> JavaScript Snippets for MDN
+> React Snippets
 
 <p align="center">
-  <img src="https://images.cnblogs.com/cnblogs_com/jwyblogs/1576071/o_220312063215_javascript.png" alt="icon">
+  <img src="https://images.cnblogs.com/cnblogs_com/jwyblogs/1576071/o_220406043027_React.png" alt="icon">
 </p>
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=jwy.javascript-snippets-self">
-    <img src="https://img.shields.io/visual-studio-marketplace/i/jwy.javascript-snippets-self?style=square" alt="">
+  <a href="https://marketplace.visualstudio.com/items?itemName=jwy.react-snippets-self">
+    <img src="https://img.shields.io/visual-studio-marketplace/i/jwy.react-snippets-self?style=square" alt="">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=jwy.javascript-snippets-self">
-    <img src="https://img.shields.io/visual-studio-marketplace/d/jwy.javascript-snippets-self?style=square" alt="">
+  <a href="https://marketplace.visualstudio.com/items?itemName=jwy.react-snippets-self">
+    <img src="https://img.shields.io/visual-studio-marketplace/d/jwy.react-snippets-self?style=square" alt="">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=jwy.javascript-snippets-self">
-    <img src="https://img.shields.io/visual-studio-marketplace/stars/jwy.javascript-snippets-self?style=square" alt="">
+  <a href="https://marketplace.visualstudio.com/items?itemName=jwy.react-snippets-self">
+    <img src="https://img.shields.io/visual-studio-marketplace/stars/jwy.react-snippets-self?style=square" alt="">
   </a>
   <a href="https://github.com/jwyGithub/JavaScript-Snippets/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/jwyGithub/JavaScript-Snippets?style=square" alt="">
-    
+    <img src="https://img.shields.io/github/license/jwyGithub/React-Snippets?style=square" alt="">
   </a>
 </p>
 
@@ -51,3 +50,4 @@ try {
 } catch (error) {
     console.log(error);
 }
+
