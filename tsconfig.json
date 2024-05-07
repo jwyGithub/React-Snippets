@@ -1,0 +1,10 @@
+{
+    "extends": "@jiangweiye/tsconfig/tsconfig.react.json",
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM"],
+        "allowJs": true
+    },
+    "include": ["build/*.ts", "src/const/const.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts", "example/**/*", "./src/snippets/**/*"]
+}
+

@@ -1,7 +1,7 @@
-const prettier = require('prettier');
+import prettier, { type Options } from 'prettier';
 
-module.exports = (html, parser = 'babel') =>
-    prettier.format(html, {
+export default async (html: string, parser: Options['parser']) =>
+    await prettier.format(html, {
         arrowParens: 'avoid',
         bracketSpacing: true,
         endOfLine: 'crlf',
@@ -19,3 +19,4 @@ module.exports = (html, parser = 'babel') =>
         useTabs: false,
         parser: parser
     });
+
