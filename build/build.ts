@@ -1,8 +1,8 @@
-import { SNIPPETS_TEMPLATE_ROOT, SNIPPETS_OUTPUT_ROOT } from '../src/const/const';
 import fs from 'node:fs';
-import { getFiles } from './utils';
-import prettier from './prettier';
 import type { BuiltInParserName, LiteralUnion } from 'prettier';
+import { DEFAULT_OPTIONS, format } from '@jiangweiye/prettier-config';
+import { SNIPPETS_OUTPUT_ROOT, SNIPPETS_TEMPLATE_ROOT } from '../src/const/const';
+import { getFiles } from './utils';
 
 /**
  * @description 追加snippets
@@ -33,11 +33,16 @@ async function buildTemplate() {
     }> = [];
 
     for await (const item of templates) {
-        const body = await prettier(fs.readFileSync(item.filePath, 'utf-8'), 'typescript');
+        const body = await format(fs.readFileSync(item.filePath, 'utf-8'), {
+            ...DEFAULT_OPTIONS,
+            parser: 'typescript',
+            printWidth: 140,
+            endOfLine: 'crlf'
+        });
         snippetsRoot.push({
             key: item.fileName.replace('.tsx', ''),
             prefix: item.fileName.replace('.tsx', ''),
-            body: body,
+            body,
             parser: 'typescript',
             description: ''
         });
@@ -57,13 +62,8 @@ async function buildTemplate() {
     appendSnippets(snippets);
 }
 
-/**
- * @description 获取snippets配置
- * @returns
- */
 function getSnippetsConfig() {
     buildTemplate();
 }
 
 getSnippetsConfig();
-

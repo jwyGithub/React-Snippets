@@ -4,7 +4,7 @@ import path from 'node:path';
 /**
  * @description 判断是否是文件夹
  * @param {string} dir
- * @returns  {boolean}
+ * @returns  {boolean} 是否是文件夹
  */
 export function isDir(dir: string): boolean {
     return fs.statSync(dir).isDirectory();
@@ -37,4 +37,3 @@ export function getFiles(dir: string) {
 
     return _getFiles(dir);
 }
-

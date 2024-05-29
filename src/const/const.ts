@@ -14,4 +14,3 @@ export const SNIPPETS_OUTPUT_ROOT = path.resolve(__dirname, '../../snippets/snip
  * @description The root path of the snippets input
  */
 export const SNIPPETS_INPUT_ROOT = path.resolve(__dirname, '../../src/snippets');
-
